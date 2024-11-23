@@ -19,7 +19,8 @@ class ProfilePage extends StatelessWidget {
               Center(
                 child: CircleAvatar(
                   radius: 50, // Ukuran foto profil
-                  backgroundImage: AssetImage('assets/image/profil.jpg'), // Ganti dengan URL foto profil
+                  backgroundImage: AssetImage(
+                      'assets/image/profil.jpg'), // Ganti dengan URL foto profil
                 ),
               ),
               SizedBox(height: 20),
@@ -27,16 +28,22 @@ class ProfilePage extends StatelessWidget {
               // Deskripsi Nama Nasabah
               Text(
                 'Nama Nasabah',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black),
+                style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
               ),
-              _buildProfileField('Fandi Ahmad'),
+              _buildProfileField('Abdul Hafid'),
 
               SizedBox(height: 20),
 
               // Deskripsi Jenis Kelamin
               Text(
                 'Jenis Kelamin',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black),
+                style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
               ),
               _buildProfileField('Laki-laki'),
 
@@ -45,9 +52,13 @@ class ProfilePage extends StatelessWidget {
               // Deskripsi Alamat
               Text(
                 'Alamat',
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black),
+                style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
               ),
-              _buildProfileField('Jl. Jogoroto Rt/Rw 010/005, Jogoroto, jombang'),
+              _buildProfileField(
+                  'Jl. Kedungmaling Rt/Rw 010/004, Sooko, Mojokerto'),
             ],
           ),
         ),

@@ -34,10 +34,11 @@ class DashboardPage extends StatelessWidget {
                     children: [
                       Text(
                         'Selamat datang',
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'Fandi Ahmad',
+                        'Abdul Hafid',
                         style: TextStyle(fontSize: 16),
                       ),
                     ],
@@ -64,7 +65,9 @@ class DashboardPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(Icons.wallet, size: 50, color: Colors.blue), // Ikon dompet di pojok kiri
+                  Icon(Icons.wallet,
+                      size: 50,
+                      color: Colors.blue), // Ikon dompet di pojok kiri
                   SizedBox(width: 10),
                   Expanded(
                     child: Column(
@@ -72,19 +75,22 @@ class DashboardPage extends StatelessWidget {
                       children: [
                         Text(
                           'Saldo',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          'Rp 5.000.000', // Ganti dengan saldo aktual
-                          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                          'Rp 3.000.000', // Ganti dengan saldo aktual
+                          style: TextStyle(
+                              fontSize: 28, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(height: 10),
                         Text(
                           'Nomor Rekening',
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          '12345xxxx', // Ganti dengan nomor rekening aktual
+                          '0585xxxx', // Ganti dengan nomor rekening aktual
                           style: TextStyle(fontSize: 16),
                         ),
                       ],
@@ -109,7 +115,8 @@ class DashboardPage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => TransaksiPage()),
+                        MaterialPageRoute(
+                            builder: (context) => TransaksiPage()),
                       );
                     },
                     child: Container(
@@ -147,7 +154,8 @@ class DashboardPage extends StatelessWidget {
                     padding: EdgeInsets.all(10),
                     child: Column(
                       children: [
-                        Icon(Icons.account_balance, size: 40, color: Colors.blue),
+                        Icon(Icons.account_balance,
+                            size: 40, color: Colors.blue),
                         SizedBox(height: 5),
                         Text('Akun Bank', style: TextStyle(fontSize: 16)),
                       ],
@@ -165,11 +173,12 @@ class DashboardPage extends StatelessWidget {
             SizedBox(height: 10),
             Column(
               children: [
-                TransactionItem(name: 'Moch Imamudin', amount: 200.000, type: 'Uang Masuk'),
-                TransactionItem(name: 'Achmad Zamroni', amount: 150.000, type: 'Uang Masuk'),
-                TransactionItem(name: 'Muhammad Alfarisyi', amount: 30.000, type: 'Uang Masuk'),
-                TransactionItem(name: 'Muhammad Mashum', amount: 100.000, type: 'Uang Masuk'),
-                TransactionItem(name: 'Tajjudin hasani', amount: 250.000, type: 'Uang Masuk'),
+                TransactionItem(
+                    name: 'Orang 3', amount: 30.000, type: 'Uang Masuk'),
+                TransactionItem(
+                    name: 'Orang 2', amount: 100.000, type: 'Uang Masuk'),
+                TransactionItem(
+                    name: 'Orang 1', amount: 250.000, type: 'Uang Masuk'),
               ],
             ),
           ],
@@ -184,7 +193,8 @@ class TransactionItem extends StatelessWidget {
   final double amount;
   final String type;
 
-  TransactionItem({required this.name, required this.amount, required this.type});
+  TransactionItem(
+      {required this.name, required this.amount, required this.type});
 
   @override
   Widget build(BuildContext context) {
@@ -197,19 +207,24 @@ class TransactionItem extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(Icons.attach_money, size: 40, color: Colors.green), // Ikon uang masuk
+          Icon(Icons.attach_money,
+              size: 40, color: Colors.green), // Ikon uang masuk
           SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), // Nama penerima tebal
+                Text(name,
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold)), // Nama penerima tebal
                 Text(type, style: TextStyle(fontSize: 14)),
               ],
             ),
           ),
           SizedBox(width: 10),
-          Text('Rp ${amount.toString()}', style: TextStyle(fontSize: 16)), // Nominal transfer
+          Text('Rp ${amount.toString()}',
+              style: TextStyle(fontSize: 16)), // Nominal transfer
         ],
       ),
     );

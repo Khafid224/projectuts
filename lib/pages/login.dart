@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 10),
               Text(
-                'Fandi Ahmad - 4122048',
+                'Abdul Hafid - 4122051',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey,
@@ -73,7 +73,9 @@ class _LoginPageState extends State<LoginPage> {
                   prefixIcon: Icon(Icons.lock),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                      _obscurePassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
                     ),
                     onPressed: _togglePasswordVisibility,
                   ),
@@ -107,7 +109,8 @@ class _LoginPageState extends State<LoginPage> {
                         // Logika untuk login dengan Apple ID
                       },
                       icon: Icon(Icons.apple, color: Colors.white),
-                      label: Text(' Apple ID', style: TextStyle(color: Colors.white)),
+                      label: Text(' Apple ID',
+                          style: TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 15),
                         backgroundColor: Colors.black, // Latar belakang hitam
@@ -126,7 +129,8 @@ class _LoginPageState extends State<LoginPage> {
                         // Logika untuk login dengan Google
                       },
                       icon: Icon(Icons.email, color: Colors.white),
-                      label: Text(' Google', style: TextStyle(color: Colors.white)),
+                      label: Text(' Google',
+                          style: TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 15),
                         backgroundColor: Colors.red, // Latar belakang merah

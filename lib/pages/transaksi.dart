@@ -7,7 +7,8 @@ class TransaksiPage extends StatefulWidget {
 
 class _TransaksiPageState extends State<TransaksiPage> {
   String? selectedBank;
-  bool isBankSelected = true; // Untuk menentukan apakah Bank atau E-Wallet yang dipilih
+  bool isBankSelected =
+      true; // Untuk menentukan apakah Bank atau E-Wallet yang dipilih
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +51,13 @@ class _TransaksiPageState extends State<TransaksiPage> {
                             children: [
                               Text(
                                 'Saldo',
-                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
                               ),
                               Text(
-                                'Rp 5.000.000', // Ganti dengan saldo aktual
-                                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                                'Rp 3.000.000', // Ganti dengan saldo aktual
+                                style: TextStyle(
+                                    fontSize: 28, fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
@@ -64,10 +67,11 @@ class _TransaksiPageState extends State<TransaksiPage> {
                     SizedBox(height: 10),
                     Text(
                       'Nomor Rekening',
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      '12345xxxx', // Ganti dengan nomor rekening aktual
+                      '0585xxxx', // Ganti dengan nomor rekening aktual
                       style: TextStyle(fontSize: 16),
                     ),
                   ],
@@ -89,13 +93,15 @@ class _TransaksiPageState extends State<TransaksiPage> {
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: isBankSelected ? Colors.blue : Colors.grey[300],
+                          color:
+                              isBankSelected ? Colors.blue : Colors.grey[300],
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Center(
                           child: Text(
                             'Bank',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -112,13 +118,15 @@ class _TransaksiPageState extends State<TransaksiPage> {
                       child: Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: !isBankSelected ? Colors.blue : Colors.grey[300],
+                          color:
+                              !isBankSelected ? Colors.blue : Colors.grey[300],
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Center(
                           child: Text(
                             'E-Wallet',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -137,8 +145,11 @@ class _TransaksiPageState extends State<TransaksiPage> {
                 value: selectedBank,
                 hint: Text('Pilih Bank'),
                 isExpanded: true,
-                items: <String>['Bank BRI', 'Bank Mandiri', 'Bank Syariah Indonesia']
-                    .map<DropdownMenuItem<String>>((String value) {
+                items: <String>[
+                  'Bank BRI',
+                  'Bank Mandiri',
+                  'Bank Syariah Indonesia'
+                ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Text(value),
@@ -185,7 +196,9 @@ class _TransaksiPageState extends State<TransaksiPage> {
                     onPressed: () {
                       // Aksi ketika tombol Selanjutnya ditekan
                     },
-                    child: Text('Selanjutnya', style: TextStyle(fontSize: 20)), // Ukuran teks lebih besar
+                    child: Text('Selanjutnya',
+                        style:
+                            TextStyle(fontSize: 20)), // Ukuran teks lebih besar
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue, // Warna tombol
                       foregroundColor: Colors.black, // Warna teks tombol
